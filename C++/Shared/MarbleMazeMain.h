@@ -20,6 +20,7 @@
 #include "Audio.h"
 #include "PersistentState.h"
 #include "LoadScreen.h"
+#include "GameInputManager.h"
 
 using namespace DirectX;
 
@@ -102,7 +103,7 @@ namespace MarbleMaze
         Microsoft::WRL::ComPtr<ID3D11Buffer>                m_constantBuffer;
         Microsoft::WRL::ComPtr<ID3D11BlendState>            m_blendState;
         Windows::Devices::Sensors::Accelerometer^           m_accelerometer;
-
+        std::unique_ptr<GameInputManager> m_inputManager;
         std::unique_ptr<Camera> m_camera;
         ConstantBuffer  m_mazeConstantBufferData;
         SDKMesh         m_mazeMesh;

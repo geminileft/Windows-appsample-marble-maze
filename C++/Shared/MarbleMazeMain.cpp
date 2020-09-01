@@ -73,6 +73,7 @@ MarbleMazeMain::MarbleMazeMain(const std::shared_ptr<DX::DeviceResources>& devic
     m_audio.Initialize();
     m_accelerometer = Windows::Devices::Sensors::Accelerometer::GetDefault();
 
+    m_inputManager = std::unique_ptr<GameInputManager>(GameInputManager::InitPlatformManager(m_deviceResources->GetWindow()));
     m_loadScreen = std::unique_ptr<LoadScreen>(new LoadScreen());
     m_loadScreen->Initialize(
         m_deviceResources->GetD2DDevice(),

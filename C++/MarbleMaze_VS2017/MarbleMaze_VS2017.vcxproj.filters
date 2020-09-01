@@ -20,6 +20,9 @@
     <Filter Include="Media\Models">
       <UniqueIdentifier>{43f4c5b9-46de-4d7e-8982-3f9ba9605f65}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{2a715a94-baa3-452a-9b24-3628be7f0c84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\..\Downloads\DirectX marble maze game sample\C++\Shared\MarbleMaze.Shared.vcxitems.filters" />
@@ -129,6 +132,9 @@
     <ClCompile Include="..\Shared\SampleOverlay.cpp" />
     <ClCompile Include="..\Shared\SDKMesh.cpp" />
     <ClCompile Include="..\Shared\UserInterface.cpp" />
+    <ClCompile Include="GameInputManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Shared\App.h" />
@@ -153,6 +159,9 @@
     <ClInclude Include="..\Shared\SDKMesh.h" />
     <ClInclude Include="..\Shared\StepTimer.h" />
     <ClInclude Include="..\Shared\UserInterface.h" />
+    <ClInclude Include="GameInputManager.h">
+      <Filter>Input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\Shared\BasicPixelShader.hlsl" />
